@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../Site-individual/imagens/esfera.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css_log&&cads.css">
+    <link rel="stylesheet" href="db.js">
+    <title>Cadastro - Login</title>
+</head>
+
+<body>
+    <div id="all">
+        <div id="login">
+            <h2 onclick="login1()">LOGIN</h2>
+        </div>
+        <div id="cadastro">
+            <h2 onclick="cadastro1()">CADASTRO</h2>
+        </div>
+    </div>
+    
+    <!------------------------------------------ LOGIN COMEÇA AQUI  -------------------------------------------------->
+    <div id="all2">
+        <div id="imglogin">
+            <img id="imagemlogin" src="../Site-individual/imagens/l2.png" alt="">
+        </div>
+        <div id="paglogin">
+            <form>
+                <label for="login">Login:</label>
+                <input type="text">
+                <label for="passsword">Password:</label>
+                <input type="password">
+            </form>
+            <ul>
+
+                <li>
+                    <a href="">
+                        Esqueceu a senha?
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="">
+                        Não tem cadastro?
+                    </a>
+                </li>
+
+            </ul>
+            <button id="btn1">Logar</button>
+        </div>
+    </div>
+    <!--------------------------------------------------------- CADASTRO COMEÇA AQUI ---------------------------------------->
+    <div id="all3">
+        <div id="imglogin">
+            <img id="imagemlogin" src="../Site-individual/imagens/c2.png" alt="">
+        </div>
+        <div id="pagcadastro">
+            <form>
+                <label for="user">Username:</label>
+                <input id="usuario" type="text">
+                <label for="user">Nickname:</label>
+                <input id="apelido" type="text">
+                <label for="user">E-mail:</label>
+                <input id="email" type="text">
+                <label for="passsword">Password:</label>
+                <input id="senha" type="text">
+                <label for="passsword">Repeat password:</label>
+                <input type="text">
+            </form>
+            <button id="btn2" onclick="Cadastrar()">Cadastrar</button>
+        </div>
+    </div>
+    <script src="../Site-individual/projeto-aquisicao-local/api-aquisicao-arqcomp/app/controller.js"></script>
+</body>
+</html>
+
+<script>
+    function login1() {
+       all.style.display = `none`;
+       all2.style.display = `block`;
+    }
+    function cadastro1() {
+        all.style.display = `none`;
+        all3.style.display = `block`;
+    }
+</script>
