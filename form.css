@@ -1,0 +1,136 @@
+body  {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+}
+
+#tudo {
+    background: url(../Site-Individual/imagens/kirito.jpg) center no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+#opc {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.head { 
+    width: 100%;
+    height: 6em;
+    background-color:rgba(0, 0, 0, 0.685);
+    border-bottom: 1px solid white;
+    box-shadow: 0px 5px 50px rgba(255, 255, 255, 0.555);/*desclocamento da sombra em : 1-horizontal 2- vertical 3- borrão 4 - cor*/
+    /* position: absolute; */
+    z-index: 1;
+}
+
+.head #logo {
+    margin-left: 65px;
+    margin-top: 15px;
+    width: 75px;
+}
+
+.formulario {
+    width: 85%;
+    height: 85%;
+    float: right;
+}
+
+#usuario {
+    width: 100%;
+    height: 70px;
+}
+#nome {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 30px;
+}
+
+#limite {
+    width: 85%;
+    height: 90%;
+    margin: auto;
+}
+
+#inpt {
+    width: 60%;
+    height: 40px;
+    font-size: 20px;
+}
+
+#combo {
+    width: 80%;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 1%;
+}
+
+#textos {
+    width: 80%;
+    height: 200px;
+}
+
+h3 {
+    font-size: 25px;
+    margin-bottom: 1%;
+}
+
+#btn {
+    float: right;
+    width: 230px;
+    height: 17%;
+    font-size: 25px ;
+    text-align: center;
+    border-radius: 30px;
+    background-color: white;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+
+#btn:hover{
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.849);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.692);
+    border: 1px solid white;
+}
+
+input {
+    border-top: none;
+    border-left: 1px solid;
+    border-radius: 0px 0px 0px 10px;
+    border-right: none;
+    background: transparent;
+    margin-bottom: 1%;
+    color: #f4f4f4;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.822);
+    padding-left: 10px;
+    
+}
+
+textarea::placeholder {
+    color: black;
+    padding: 5px 0 0 8px;
+    font-size: 20px;
+}
+
+#combo {
+    padding-left: 10px;
+    border-radius: 4px;
+}

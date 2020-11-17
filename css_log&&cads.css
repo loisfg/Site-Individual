@@ -16,7 +16,6 @@ body {
     height: 100%;
     background: rgb(2,0,36);
     position: absolute;
-    /* display: none; */
 }
 #login h2 {
     cursor: pointer;
