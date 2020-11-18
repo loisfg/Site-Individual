@@ -1,0 +1,443 @@
+* { 
+    font-family: 'Courier New', Courier, monospace
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    color: white;
+}
+
+#opc {
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.671);
+}
+
+#pagina1 { 
+    width: 100%;
+    height: 100%;
+    background: url(../public/imagens/fundo.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.head { 
+    width: 100%;
+    height: 6em;
+    background-color:rgba(0, 0, 0, 0.685);
+    border-bottom: 1px solid white;
+    box-shadow: 0px 5px 50px rgba(255, 255, 255, 0.555);/*desclocamento da sombra em : 1-horizontal 2- vertical 3- borrão 4 - cor*/
+    position: absolute;
+    z-index: 1;
+}
+
+.head #logo {
+    margin-left: 65px;
+    margin-top: 15px;
+    width: 75px;
+}
+
+
+.head li {
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding-right: 3em; /*A div terá um font-size de 1.2em, Isto é, 1,2 vezes o tamanho da fonte que herdou (se não tiver algo pra herdar, ele pega do padrão do body) */
+    text-align: right;
+}
+
+.head a{
+    text-decoration: none;
+}
+
+.head ul {
+    position: absolute;
+    top: 0px;
+    right: 200px;
+    margin: 40px 0 0 0 ;
+    font-size: 1.5em;
+}
+
+#usericon img {
+    width: 50px;
+    right: 3%;
+    top: 30%;
+    position: absolute;
+}
+
+.head #usericon img:hover{
+    width: 55px;
+    right: 2.9%;
+    top: 29%;
+}
+
+.head b {
+    right: 3.1%;
+    position: absolute;
+    color: white;
+    top: 7.5%;
+}
+
+
+/* BOX 1 COMEÇA AQUI */
+#box1 {
+    height:70%; 
+    width: 42%;
+    color: white;
+    top:20%;
+    position: absolute;
+    right: 32%;
+    border-radius: 45px 0;
+    display: none;
+}
+
+#box1 drop { 
+    display: inline-block;
+    text-align: center;   
+    width: 100%;
+}
+
+#box1 img {
+    width: 30px;
+}
+
+#box1 a{
+    text-decoration: none;
+    color: white;
+}
+
+#box1 ul {
+    list-style: none;
+    text-decoration: none;
+    padding: 0 10% 1% 0;
+    margin: 5% 0 0 13%;
+    border-left: 2px solid black;
+    font-weight: bold;
+}
+
+#box1 li { 
+    padding: 3% 0;
+    font-size: 22px;
+}
+
+
+/* BOX 1 finish AQUI */
+
+
+/* BOX 2 start AQUI */
+
+#box2 {
+    height:50%;
+    width: 50%;
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 45px 0;
+    text-align: center;
+    display: block;
+}
+
+#box2 h2 {
+    top: 45%;
+    left: 48%;
+    font-size: 50px;
+    cursor:pointer;
+    position: absolute;
+    transform: translate(-50%,-50%); /* Definindo eixo 0;*/
+}
+
+#box1 img {
+    width: 50px;
+    margin: 20px 10px 0 0 ;
+}
+
+#box1 #btn {
+    float: right;
+    width: 250px;
+    height: 17%;
+    font-size: 25px ;
+    text-align: center;
+    border-radius: 30px;
+    background-color: white;
+}
+
+#btn:hover{
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.849);
+    color: black;
+    border: 1px solid white;
+}
+/* BOX 2 TERMINA AQUI */
+
+#box3 {
+    height:70%;
+    width: 42%;
+    top:20%;
+    position: absolute;
+    right: 15%;
+    border-radius: 45px 0;
+    display: none;
+    text-align: center;
+}
+
+#box3 #metade3{
+    height: 300px;
+    width: 700px;
+}
+
+#box3 #metade4{
+    height: 300px;
+    width: 700px;
+}
+
+#metade3 img { 
+    width: 200px;
+    margin: 5% 10px 10px 13%;
+}
+
+#metade4 img { 
+    width: 200px;
+    margin: 5% 10px 10px 13%;
+}
+
+
+/* -------PAGINA2 COMEÇANDO--------- */
+
+#pagina2{
+    width:100%;
+    height:100%;
+    background: url(../public/imagens/meliodas.jpg) center no-repeat;
+    background-size: cover;
+    display: none;
+}
+
+.sobreLOL {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.sobreLOL2 {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.box1pag2 {
+    width: 80%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+}
+
+.box2pag2 {
+    width: 80%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+#pagina2 h2 { 
+    margin: 0;
+    font-size: 3em;
+    margin-bottom: 6%;
+    margin-top: 20px;
+}
+
+#pagina2 p { 
+    font-size: 1.1em;
+    color: white;
+}
+
+.box1pag2 p {
+    margin-bottom: 0;
+}
+
+.box2pag2 p{
+    padding-bottom: 2px;
+}
+
+#video {
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.794);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 590px;
+    height: 325px
+}
+
+#imagemelos { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.794);
+    border: 2px solid rgba(227,15,15,1);
+}
+
+#imagemelos p {
+    bottom: 0;
+    position: absolute;
+    text-align: right;
+}
+
+#imagemelos img {
+    width: 100%;
+    height: 80%;
+}
+
+#btn1 {
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 5%;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+#btn2 {
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 5%;
+    font-size: 20px;
+    /* margin-top: 15px; */
+}
+
+#btn1:hover {
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.849);
+    background: rgba(0, 0, 0, 0.609);
+    color: white;
+    border: 1px solid white;
+}
+
+#btn2:hover {
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.849);
+    background: rgba(0, 0, 0, 0.609);
+    color: white;
+    border: 1px solid white;
+}
+
+#gif {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    bottom: 0;
+}
+
+#league, #valorant, #CSGO {
+    cursor: pointer;
+}
+
+/* PAGINA VALORANT  */
+
+#pagina3{
+    width:100%;
+    height:100%;
+    background: url(../public/imagens/goku.jpg) center no-repeat;
+    background-size: cover;
+    display: none;
+}
+
+.sobreValorant {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.sobreValorant2 {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+#pagina3 h2 { 
+    margin: 0;
+    font-size: 40px;
+    margin-bottom: 6%;
+    margin-top: 20px;
+}
+
+#pagina3 p { 
+    font-size: 1.1em;
+    color: white;
+}
+
+#imagem {
+    height: 300px;
+    width: 600px;
+}
+
+/* PAGINA CS */
+
+#pagina4{
+    width:100%;
+    height:100%;
+    background: url(../public/imagens/sao.jpg) center no-repeat;
+    background-size: cover;
+    display: none;
+}
+
+.sobreCS {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.sobreCS2 {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+#pagina4 h2 { 
+    margin: 0;
+    font-size: 40px;
+    margin-bottom: 6%;
+    margin-top: 20px;
+}
+
+#pagina4 p { 
+    font-size: 1.1em;
+    color: white;
+}
+
+#CSGO:hover{
+    border-radius: 10%;
+    background: url(../public/imagens/cs.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#league:hover{
+    border-radius: 10%;
+    background: url(../public/imagens/lol.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+#valorant:hover{ 
+    border-radius: 10%;
+    background: url(../public/imagens/valorant.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* #omg {
+    width: 100%;
+    background-color: black;
+    position: static;
+    display: flex;
+    bottom: 0%;
+    justify-content: center;
+} */
