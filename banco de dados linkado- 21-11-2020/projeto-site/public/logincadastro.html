@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="imagens/esfera.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css_log&&cads.css">
+    <title>Cadastro - Login</title>
+</head>
+
+<body>
+    <div id="all">
+        <div id="login">
+            <h2 onclick="login1()">LOGIN</h2>
+            <img id="gif" src="imagens/KisameAkatsuki.gif" alt="">
+        </div>
+        <div id="cadastro">
+            <h2 onclick="cadastro1()">CADASTRO</h2>
+            <img id="gif" src="imagens/gaara.gif" alt="">
+        </div>
+    </div>
+
+    <!------------------------------------------ LOGIN COMEÇA AQUI  -------------------------------------------------->
+
+    <div id="all2">
+        <div id="opc">
+            <div id="espaco">
+                <div id="imglogin">
+                    <img id="imagemlogin" src="imagens/l2.png" alt="">
+                </div>
+                <nav role="navigation">
+                    <div id="menuToggle">
+                        <input type="checkbox">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <ul id="menu">
+                            <a href="index.html">
+                                <li>Inicio</li>
+                            </a>
+                            <a href="story.html">
+                                <li>Histórias</li>
+                            </a>
+                            <a href="#">
+                                <li>Sobre mim</li>
+                            </a>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div id="paglogin">
+
+                <form id="form_login" method="POST" onsubmit="return entrar()">
+
+                    <label for="login">Login:</label>
+                    <input name="login" type="text" placeholder="Insira seu login">
+
+                    <label for="passsword">Password:</label>
+                    <input name="senha" type="password" placeholder="Insira sua senha">
+
+                    <button id="btn1">Logar</button>
+                </form>
+
+                <div class="extra">
+                    <div id="div_erro" class="msg_erro">
+                    </div>
+
+                    <img src="imagens/narutocarregamento.gif" id="img_aguarde">
+                    
+                </div>
+
+                <ul>
+
+                    <li>
+                        <a href="">
+                            Esqueceu a senha?
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Não tem cadastro?
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------------------------------- CADASTRO COMEÇA AQUI ---------------------------------------->
+
+    <div id="all3">
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                    <a href="index.html">
+                        <li>Inicio</li>
+                    </a>
+                    <a href="story.html">
+                        <li>Histórias</li>
+                    </a>
+                    <a href="#">
+                        <li>Sobre mim</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+            <div id="imgcadastro">
+                <img id="imagemcadastro" src="imagens/c2.png" alt="">
+            </div>
+        
+        <div id="pagcadastro">
+            <form id="form_cadastro" method="POST" onsubmit="return cadastrar()">
+                <label for="user">Usuario:</label>
+                <input id="apelido" name="nome" type="text" placeholder="Insira seu nome">
+
+                <label for="user">Login:</label>
+                <input id="usuario" name="login" type="text" placeholder="Insira seu apelido">
+
+                <label for="user">E-mail:</label>
+                <input id="email" name="email" type="text" placeholder="Insira seu e-mail">
+
+                <label for="passsword">Password:</label>
+                <input id="senha" name="senha" type="password" placeholder="Insira sua senha">
+
+                <label for="passsword">Repeat password:</label>
+                <input id="senha2" type="password" placeholder="Repita sua senha">
+
+                <button id="btn_entrar" class="btn2">Cadastrar</button>
+            </form>
+            <img src="imagens/narutocarregamento.gif" id="img_aguarde" style="display: none;" width="100px">
+    
+                <div id="div_erro" style="background-color: #bf8899; color: maroon; display: none;">
+                    Erro no cadastro
+                </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="login.js"></script>
+
+
+<script>
+    function login1() {
+        all.style.display = `none`;
+        all2.style.display = `block`;
+    }
+    function cadastro1() {
+        all.style.display = `none`;
+        all3.style.display = `block`;
+    }
+    
+    function cadastrar() {
+    var formulario = new URLSearchParams(new FormData(form_cadastro));
+    fetch("/usuarios/cadastrar", {
+        method: "POST",
+        body: formulario
+    }).then(function (response) {
+        
+        if (response.ok) {
+            alert(`Cadastro realizado com sucesso`);
+            window.location.href='logincadastro.html';
+
+        } else {
+
+            console.log('Erro de cadastro!');
+            response.text().then(function (resposta) {
+                div_erro.innerHTML = resposta;
+            });
+        }
+    });
+
+    return false;
+}
+
+// function aguardar() {
+//     btn_entrar.disabled = true;
+//     img_aguarde.style.display='block';
+//     div_erro.style.display='none';
+// }
+
+// function finalizar_aguardar() {
+//     btn_entrar.disabled = false;
+//     img_aguarde.style.display='none';
+//     div_erro.style.display='block';
+// }
+
+function entrar() {
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+                    alert("Seja bem vindo!");
+
+                    sessionStorage.login_usuario_meuapp = json.login;
+                    sessionStorage.nome_usuario_meuapp = json.nome;
+
+                    window.location.href = 'story.html';
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+        });
+
+        return false;
+    }
+</script>

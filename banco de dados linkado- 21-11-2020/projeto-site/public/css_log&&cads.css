@@ -1,0 +1,356 @@
+* { 
+    font-family: 'Courier New', Courier, monospace
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    color: white;
+}
+
+#all {
+    width: 100%;
+    height: 100%;
+    background: rgb(2,0,36);
+    position: absolute;
+    /* display: none; */
+}
+#login h2 {
+    cursor: pointer;
+    margin: 0;
+}
+
+#cadastro h2 {
+    cursor: pointer;
+    margin: 0;
+}
+
+#login {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    float: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1s;
+}
+#gif {
+    width: 300px;
+    height: 200px;
+}
+
+#login:hover {
+    width: 90%;
+    position: absolute;
+    left: 0;
+}
+
+#cadastro:hover{
+    width: 90%;
+    position: absolute;
+    right: 0;
+}
+
+#cadastro{
+    width: 50%;
+    height: 100%;
+    background-color: red;
+    float: right;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1s;
+    right: 0;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+
+/* LOGIN HERE */
+#all2{
+    width: 100%;
+    height: 100%;
+    background: url(imagens/nogame.jpg) no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+#opc {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.644);
+}
+#paglogin {
+    width: 650px;
+    height: 300px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    font-size: 30px;
+}
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-top: none;
+    border-left: 1px solid;
+    border-radius: 0px 10px 0px 10px;
+    border-right: none;
+    background: rgba(0, 0, 0, 0.171);
+    color: #f4f4f4;
+    font-size: 20px;
+}
+#all3 input {
+    width: 100%;
+    height: 18px;
+    padding: 12px 20px;
+    margin: 7px 0;
+    border-top: none;
+    border-left: 1px solid;
+    border-radius: 0px 10px 0px 10px;
+    border-right: none;
+    background: rgba(0, 0, 0, 0.171);
+    color: #f4f4f4;
+    font-size: 20px;
+}
+
+
+#imglogin {
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
+}
+
+
+#imagemlogin {
+    width: 30%;
+    height: 60%;
+}
+
+#espaco {
+    width: 100%;
+    height: 25%;
+}
+
+#btn1 {
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 5%;
+    font-size: 25px;
+    margin-top: 2%;
+    right: 0;
+    bottom: 0;
+    color: white;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.609);
+}
+
+#btn1:hover {
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.849);
+    background: rgba(255, 255, 255, 0.876);
+    color: black;
+    border: 1px solid black;
+}
+
+#paglogin li,ul {
+    font-size: 20px;
+    text-decoration: none;
+    list-style: none;
+    padding-bottom: 1%;
+    padding-left: 0;
+}
+#paglogin a {
+    color: white;
+}
+/* CADASTRO HERE */
+
+#all3 {
+    width: 100%;
+    height: 100%;
+    background: url(imagens/fundoestrelas.jpg) center no-repeat;
+    background-size: cover;
+    display: none;
+}
+
+#pagcadastro {
+    width: 650px;
+    height: 300px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    font-size: 30px;
+}
+#imgcadastro{
+    width:100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#imagemcadastro {
+    width: 80%;
+    height: 60%;
+}
+
+.btn2 {
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 5%;
+    font-size: 25px;
+    margin-top: 2%;
+    right: 0;
+    color: white;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.609);
+}
+
+#btn2:hover {
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.849);
+    background: rgba(255, 255, 255, 0.876);
+    color: black;
+    border: 1px solid black;
+}
+
+/* PARTE DO MENU HAMBURGUER */
+
+#menuToggle {
+    width: 45px;
+    display: block;
+    position: relative;
+    top: 65px;
+    left: 50px;
+    z-index: 1;
+    
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  #menuToggle a {
+    text-decoration: none;
+    color: #f4f4f4;
+    
+    transition: color 0.3s ease;
+  }
+  
+  #menuToggle a:hover {
+    color: tomato;
+  }
+  
+  
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* esconder o menu */
+    z-index: 2; /* pra ficar por cima do menu */
+    -webkit-touch-callout: none;
+  }
+  
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    background: #cdcdcd;
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  #menuToggle span:first-child { /* Representa o primeiro filho do seu pai*/
+    transform-origin: 0% 0%;
+  }
+  
+  #menuToggle span:nth-last-child(2) { /*Entre as aspas representa a colocação do filho*/
+    transform-origin: 0% 100%;
+  }
+  
+  #menuToggle input:checked ~ span { /*Checando se o input foi clicado*/
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #cdcdcd;
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+  #menu { /* Tamanho muda aqui*/
+    position: absolute;
+    width: 250px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #181717;
+    list-style-type: none;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    border-radius:0 20px 20px 0 ;
+  }
+  
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+  
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+
+  
+/* EXTRA */
+
+.extra {
+    margin: 10px;
+}
+
+.extra img {
+  height: 50px;
+   visibility: hidden;
+}
+
+.extra .msg_erro {
+    background-color:  #e7b9c4; 
+    color: black; 
+    visibility: hidden;
+}

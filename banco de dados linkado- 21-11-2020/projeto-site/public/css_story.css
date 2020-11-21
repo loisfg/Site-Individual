@@ -1,0 +1,353 @@
+* { 
+    font-family: 'Courier New', Courier, monospace
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    color: white;
+}
+#square{
+    background-color: transparent;
+}
+#all {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    background: url(imagens/fundo.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.head { 
+    width: 100%;
+    height: 6em;
+    background-color:rgba(0, 0, 0, 0.685);
+    border-bottom: 1px solid white;
+    box-shadow: 0px 5px 50px rgba(255, 255, 255, 0.555);/*desclocamento da sombra em : 1-horizontal 2- vertical 3- borrão 4 - cor*/
+    position: absolute;
+}
+
+.head #logo {
+    margin-left: 65px;
+    margin-top: 15px;
+    width: 75px;
+}
+
+
+.head li {
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding-right: 3em; /*A div terá um font-size de 1.2em, Isto é, 1,2 vezes o tamanho da fonte que herdou (se não tiver algo pra herdar, ele pega do padrão do body) */
+    text-align: right;
+}
+
+.head a{
+    text-decoration: none;
+}
+
+.head ul {
+    position: absolute;
+    top: 0px;
+    right: 200px;
+    margin: 40px 0 0 0 ;
+    font-size: 1.5em;
+}
+
+#usericon img {
+    width: 50px;
+    right: 3%;
+    top: 30%;
+    position: absolute;
+}
+
+.head #usericon img:hover{
+    width: 55px;
+    right: 2.9%;
+    top: 29%;
+}
+
+.head b {
+    right: 3.1%;
+    position: absolute;
+    color: white;
+    top: 7.5%;
+}
+
+/* CONTEUDO DA PAGINA HISTORIAS */
+
+.historias {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 6em;
+}
+#container {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+#divisao1 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-direction: row;
+    transition:2s;
+}
+
+#divisao2 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-direction: row;
+}
+
+#container img {
+    width: 95%;
+    height: 95%;
+    border-radius: 100%;
+}
+
+#buton {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#btn1 {
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 5%;
+    font-size: 25px;
+}
+#btn1:hover {
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.849);
+    background: rgba(0, 0, 0, 0.609);
+    color: white;
+    border: 1px solid white;
+}
+
+.div_img {
+    background-color: pink;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#img1 {
+    background: url(imagens/fotoluis.jpg) no-repeat;
+    background-size: cover;
+}
+#img2 {
+    background: url(imagens/fotoallan.jpg) no-repeat;
+    background-size: cover;
+}
+#img3 {
+    background: url(imagens/frankfoto.jpg) right no-repeat;
+    background-size: cover;
+}
+#img4 {
+    background: url(imagens/fotorobertin.jpg) no-repeat;
+    background-size: cover;
+}
+#img5{
+    background: url(imagens/fotomatheus.jpg) no-repeat;
+    background-size: cover;
+}
+
+#divisao1 a {
+    text-decoration: none;
+    border: none;
+    width: 20%;
+    height: 80%;
+    border-radius: 50%;
+}
+#divisao2 a {
+    text-decoration: none;
+    border: none;
+    width: 20%;
+    height: 80%;
+    border-radius: 50%;
+}
+.modal {
+    display: none;
+}
+     
+.modal:target {
+    display: flex;
+}
+.modal {
+    text-align: left;
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    text-align: center;
+    overflow: auto;
+}
+     
+.modal:target {
+    justify-content: space-around;
+    align-items: center;
+}
+     
+.modal__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    cursor: default;
+}
+     
+.modal_corpo {
+    width: 30%;
+    position: relative;
+    background-color: #222020;
+    padding: 2rem;
+    cursor: default;
+}
+     
+.modal_xizinho {
+    color: initial;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 0.5rem;
+    display: inline-block;
+}
+
+#opacidade {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 800;
+    color: transparent;
+}
+#opacidade:hover{
+    background-color: rgba(0, 0, 0, 0.774);
+    color: #f4f4f4;
+    transition: 0.5s;
+}
+
+/* PARTE DO MENU HAMBURGUER */
+
+#menuToggle {
+    width: 45px;
+    display: block;
+    position: relative;
+    top: 65px;
+    left: 50px;
+    z-index: 1;
+    
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  #menuToggle a {
+    text-decoration: none;
+    color: #f4f4f4;
+    
+    transition: color 0.3s ease;
+  }
+  
+  #menuToggle a:hover {
+    color: tomato;
+  }
+  
+  
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* esconder o menu */
+    z-index: 2; /* pra ficar por cima do menu */
+    -webkit-touch-callout: none;
+  }
+  
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    background: #cdcdcd;
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  #menuToggle span:first-child { /* Representa o primeiro filho do seu pai*/
+    transform-origin: 0% 0%;
+  }
+  
+  #menuToggle span:nth-last-child(2) { /*Entre as aspas representa a colocação do filho*/
+    transform-origin: 0% 100%;
+  }
+  
+  #menuToggle input:checked ~ span { /*Checando se o input foi clicado*/
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #cdcdcd;
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+  #menu { /* Tamanho muda aqui*/
+    position: absolute;
+    width: 250px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #181717;
+    list-style-type: none;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    border-radius:0 20px 20px 0 ;
+  }
+  
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+  
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
