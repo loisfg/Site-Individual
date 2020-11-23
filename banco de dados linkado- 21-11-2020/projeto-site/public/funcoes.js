@@ -43,27 +43,27 @@ function finalizar_sessao() {
     fetch(`/usuarios/sair/${login_usuario}`, {cache:'no-store'}); 
 }
 
-function vamos() {
-    box2.style = `display:none;`;
-    box1.style = `display:block;`;
+function vamosla() {
+    box2.style = `display:none`;
+    box1.style = `display:block`;
 }
 function bt() {
-    box2.style = `display:none;`;
-    box3.style = `display:block;`;
-    box1.style = `display:none;`;
+    box2.style = `display:none`;
+    box3.style = `display:block`;
+    box1.style = `display:none`;
 }
 function troca() {
-    pagina2.style = `display:block;`;
-    pagina3.style = `display:none;`;
-    pagina4.style = `display:none:`;
+    pagina2.style = `display:block`;
+    pagina3.style = `display:none`;
+    pagina4.style = `display:none`;
 }
 function troca2() {
-    pagina3.style = `display:block;`;
-    pagina2.style = `display:none;`;
-    pagina4.style = `display:none:`;
+    pagina3.style = `display:block`;
+    pagina2.style = `display:none`;
+    pagina4.style = `display:none`;
 }
 function troca3() {
-    pagina2.style = `display:none;`;
-    pagina3.style = `display:none;`;
+    pagina2.style = `display:none`;
+    pagina3.style = `display:none`;
     pagina4.style = `display:block`;
 }
