@@ -1,22 +1,49 @@
 let login_usuario;
 let nome_usuario;
 
-function redirecionar_login() {
-    window.location.href = 'story.html';
-}
+// function redirecionar_login() {
+//    window.location.href = 'story.html';
+// }
 
 function verificar_autenticacao() {
     login_usuario = sessionStorage.login_usuario_meuapp;
     nome_usuario = sessionStorage.nome_usuario_meuapp;
     
     if (login_usuario == undefined)  {
-        redirecionar_login();
+        // alert("erro");
+        window.location.href = 'logincadastro.html';
+        return false;
     } else {
-        b_usuario.innerHTML = nome_usuario;
+        mensagem();
         validar_sessao();
+        // alert("acerto " + nome_usuario);
+        return true;
     }
     
 }
+
+function mensagem() {
+    var um = 'Como está,';
+    var dois = 'Oi';
+    var tres = 'Olá';
+    var quatro = 'Como vai,';
+    var rand = Number(Math.trunc(Math.random() * 4))
+    if (rand == 1) {
+        usericon.innerHTML = `${um} ${nome_usuario}`;
+        exit.style.display = `block`;
+    }else if (rand == 2) {
+        usericon.innerHTML = `${dois} ${nome_usuario}`;
+        exit.style.display = `block`;
+    } else if (rand == 3) {
+        usericon.innerHTML = `${tres} ${nome_usuario}`;
+        exit.style.display = `block`;
+    } else {
+        usericon.innerHTML =`${quatro} ${nome_usuario}`;
+        exit.style.display = `block`;
+    }
+}
+
+
 
 function logoff() {
     finalizar_sessao();

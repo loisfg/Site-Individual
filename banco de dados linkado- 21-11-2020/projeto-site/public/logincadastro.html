@@ -122,20 +122,20 @@
         
         <div id="pagcadastro">
             <form id="form_cadastro" method="POST" onsubmit="return cadastrar()">
-                <label for="user">Usuario:</label>
-                <input id="apelido" name="nome" type="text" placeholder="Insira seu nome">
+                <label for="nome">Usuario:</label>
+                <input id="apelido" name="nome" type="text" placeholder="Insira seu nome" required>
 
-                <label for="user">Login:</label>
-                <input id="usuario" name="login" type="text" placeholder="Insira seu apelido">
+                <label for="login">Login:</label>
+                <input id="usuario" name="login" type="text" placeholder="Insira seu apelido" required minlength="3">
 
-                <label for="user">E-mail:</label>
-                <input id="email" name="email" type="text" placeholder="Insira seu e-mail">
+                <label for="email">E-mail:</label>
+                <input id="email" name="email" type="text" placeholder="Insira seu e-mail" required>
 
-                <label for="passsword">Password:</label>
-                <input id="senha" name="senha" type="password" placeholder="Insira sua senha">
+                <label for="password">Password:</label>
+                <input id="senha" name="senha" type="password" placeholder="Insira sua senha" required minlength="8">
 
-                <label for="passsword">Repeat password:</label>
-                <input id="senha2" type="password" placeholder="Repita sua senha">
+                <label for="password">Repeat password:</label>
+                <input id="senha2" type="password" placeholder="Repita sua senha" required minlength="8">
 
                 <button id="btn_entrar" class="btn2">Cadastrar</button>
             </form>
@@ -163,6 +163,7 @@
         all3.style.display = `block`;
     }
     
+    
     function cadastrar() {
     var formulario = new URLSearchParams(new FormData(form_cadastro));
     fetch("/usuarios/cadastrar", {
@@ -178,7 +179,7 @@
 
             console.log('Erro de cadastro!');
             response.text().then(function (resposta) {
-                div_erro.innerHTML = resposta;
+                div_erro.innerHTML = ("Verifique se todas informações estão corretas");
             });
         }
     });
@@ -208,7 +209,7 @@ function entrar() {
             if (resposta.ok) {
 
                 resposta.json().then(json => {
-                    alert("Seja bem vindo!");
+                    alert("Seja bem vindo de volta " + json.nome);
 
                     sessionStorage.login_usuario_meuapp = json.login;
                     sessionStorage.nome_usuario_meuapp = json.nome;
@@ -217,11 +218,10 @@ function entrar() {
                 });
 
             } else {
-
                 console.log('Erro de login!');
-
                 resposta.text().then(texto => {
                     console.error(texto);
+                    div_erro.innerHTML = `Login/senha incorretas`
                 });
             }
         });

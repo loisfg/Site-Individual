@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="css_index.css">
     <link rel="icon" href="imagens/esfera.png">
     <script src="funcoes.js"></script>
-    <script type="text/javascript">
-        
-        alert( `${login_usuario}`);
-    </script>
     <title>Drop</title>
 </head>
 
@@ -22,10 +18,15 @@
                     <img id="logo" src="imagens/eyeglasses.png" alt="Logo">
                 </a>
                 <div id="usericon">
-                    <a href="logincadastro.html"><img src="imagens/mangekyou.gif"
-                            alt="User icon"></a>
-                    <b>login</b>
+                    <a href="logincadastro.html">
+                        <img id="usuarioimg" src="imagens/mangekyou.gif" alt="User icon"> <br>
+                        <b>Login</b>
+                    </a>
+                    <div id="exit">
+                        <img onclick="finalizar_sessao()" src="imagens/exit.png" alt="">
+                    </div>
                 </div>
+                
             </nav>
             <!-- NAV BAR TERMINA HERE -->
             <div id="box2">
@@ -186,30 +187,7 @@
 </body>
 
 </html>
-<!-- <script>
-    // function vamosla() {
-    //     box2.style = `display:none;`;
-    //     box1.style = `display:block;`;
+<script>
+    // if (verificar_autenticacao() == true) {
     // }
-    // function bt() {
-    //     box2.style = `display:none;`;
-    //     box3.style = `display:block;`;
-    //     box1.style = `display:none;`;
-    // }
-    // function troca() {
-    //     pagina2.style = `display:block;`;
-    //     pagina3.style = `display:none;`;
-    //     pagina4.style = `display:none;`;
-    // }
-    // function troca2() {
-    //     pagina3.style = `display:block;`;
-    //     pagina2.style = `display:none;`;
-    //     pagina4.style = `display:none;`;
-    // }
-    // function troca3() {
-    //     pagina2.style = `display:none;`;
-    //     pagina3.style = `display:none;`;
-    //     pagina4.style = `display:block;`;
-    // }
-</script> -->
-<!-- <script src="funcoes.js"></script> -->
+</script>

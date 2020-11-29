@@ -39,6 +39,7 @@ body {
     margin-left: 65px;
     margin-top: 15px;
     width: 75px;
+    float: left;
 }
 
 
@@ -55,32 +56,33 @@ body {
     text-decoration: none;
 }
 
-.head ul {
-    position: absolute;
-    top: 0px;
-    right: 200px;
-    margin: 40px 0 0 0 ;
-    font-size: 1.5em;
+#usericon{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    flex-direction: column;
+    
 }
-
 #usericon img {
-    width: 50px;
-    right: 3%;
-    top: 30%;
-    position: absolute;
+    width: 40px;
+    transition: all 0.5s;
 }
 
 .head #usericon img:hover{
-    width: 55px;
-    right: 2.9%;
-    top: 29%;
+    width: 46px;
 }
 
 .head b {
-    right: 3.1%;
-    position: absolute;
     color: white;
-    top: 7.5%;
+    margin-left: -5px;
+}
+#exit {
+    float: right;
+    display: none;
+    width: 40px;
 }
 
 
