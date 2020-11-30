@@ -14,7 +14,7 @@ function verificar_autenticacao() {
         window.location.href = 'logincadastro.html';
         return false;
     } else {
-        mensagem();
+       
         validar_sessao();
         // alert("acerto " + nome_usuario);
         return true;
@@ -22,34 +22,28 @@ function verificar_autenticacao() {
     
 }
 
-function mensagem() {
-    var um = 'Como está,';
-    var dois = 'Oi';
-    var tres = 'Olá';
-    var quatro = 'Como vai,';
-    var rand = Number(Math.trunc(Math.random() * 4))
-    if (rand == 1) {
-        usericon.innerHTML = `${um} ${nome_usuario}`;
-        exit.style.display = `block`;
-    }else if (rand == 2) {
-        usericon.innerHTML = `${dois} ${nome_usuario}`;
-        exit.style.display = `block`;
-    } else if (rand == 3) {
-        usericon.innerHTML = `${tres} ${nome_usuario}`;
-        exit.style.display = `block`;
-    } else {
-        usericon.innerHTML =`${quatro} ${nome_usuario}`;
-        exit.style.display = `block`;
-    }
-}
 
+function mensagem() {
+    usericon.innerHTML = `Bem vindo`;
+        setInterval(
+            function myFunction(){
+                var frases = ['Oi, ','Aobaa, ','Olá, ', 'Saudações, ', ' Dattebayo ,', 'Como estás?'];
+                for (let i = 0; i < 2; i++) {
+                var randomico = Number(Math.trunc(Math.random() * 6))
+                usericon.innerHTML = `${frases[randomico]}` + `${nome_usuario}!`;
+            }
+        },5000)
+
+    exit.style = `display:block;`;
+};
 
 
 function logoff() {
     finalizar_sessao();
     sessionStorage.clear();
-    redirecionar_login();
-    alert ('logoff');
+    // redirecionar_login();
+    alert ('Vamos sentir sua falta 😩');
+    window.location.href = 'index.html';
 }
 
 function validar_sessao() {

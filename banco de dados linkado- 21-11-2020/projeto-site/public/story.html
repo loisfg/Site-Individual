@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css_story.css">
     <link rel="icon" href="imagens/esfera.png">
+    <script src="funcoes.js"></script>
     <title>Historias</title>
 </head>
 
@@ -15,9 +16,14 @@
             <a href="index.html">
                 <img id="logo" src="imagens/eyeglasses.png" alt="Logo">
             </a>
+            <div onclick="logoff()" id="exit">
+                <img src="imagens/exit.png" alt="">
+            </div>
             <div id="usericon">
-                <a href="logincadastro.html"><img src="imagens/mangekyou.gif" alt="User icon"></a>
-                <b>login</b>
+                <a href="logincadastro.html">
+                    <img id="usuarioimg" src="imagens/mangekyou.gif" alt="User icon"> <br>
+                    <b>Login</b>
+                </a>
             </div>
         </nav>
         <!-- NAV BAR TERMINA AQUI -->
@@ -74,7 +80,7 @@
                     </a>
                 </div>
                 <div id="buton">
-                    <a href="/logincadastro.html"> <button id="btn1">Faça parte</button> </a>
+                    <a href="/formulario.html"> <button id="btn1">Faça parte</button> </a>
                 </div>
             </div>
         </div>
@@ -393,7 +399,9 @@
         </div>
     </div>
 </body>
-
 </html>
+<script>
+    verificar_autenticacao();
+    mensagem();
+</script>
 
-<script src="funcoes.js"></script>

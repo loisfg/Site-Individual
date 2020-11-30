@@ -90,7 +90,7 @@ h2 {
     background-color: rgba(0, 0, 0, 0.644);
 }
 #paglogin {
-    width: 650px;
+    width: 680px;
     height: 300px;
     top: 55%;
     left: 50%;
@@ -154,10 +154,8 @@ input {
     border-radius: 5%;
     font-size: 25px;
     margin-top: 2%;
-    right: 0;
-    bottom: 0;
+    float: right;
     color: white;
-    position: absolute;
     background: rgba(0, 0, 0, 0.609);
 }
 
@@ -337,20 +335,12 @@ input {
     transform: none;
   }
 
-  
-/* EXTRA */
-
-.extra {
-    margin: 10px;
+#erros {
+    font-size: 1rem;
 }
-
-.extra img {
-  height: 50px;
-   visibility: hidden;
+#erros img {
+    float: right;
 }
-
-.extra .msg_erro {
-    background-color:  #e7b9c4; 
-    color: black; 
-    visibility: hidden;
+#erros p {
+    float: left;
 }

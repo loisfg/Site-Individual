@@ -64,8 +64,9 @@ body {
     justify-content: center;
     float: right;
     flex-direction: column;
-    
+    font-size: 20px;
 }
+
 #usericon img {
     width: 40px;
     transition: all 0.5s;
@@ -81,8 +82,18 @@ body {
 }
 #exit {
     float: right;
-    display: none;
-    width: 40px;
+    /* display: none; */
+    width: 80px;
+    margin-top: 4px;
+    height: 60px;
+    padding-top: 15px;
+    margin-right: 2%;
+    text-align: center;
+    cursor: pointer;
+}
+#exit img {
+    width: 60%;
+    border-radius: 100px;
 }
 
 
@@ -148,10 +159,12 @@ body {
 #box2 h2 {
     top: 45%;
     left: 48%;
-    font-size: 50px;
     cursor:pointer;
     position: absolute;
     transform: translate(-50%,-50%); /* Definindo eixo 0;*/
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #000;
+    font-size: 4em; color: #fffdd9;
 }
 
 #box1 img {
@@ -340,6 +353,11 @@ body {
 #league, #valorant, #CSGO {
     cursor: pointer;
 }
+#league li, #valorant li, #CSGO li {
+    -webkit-text-stroke-width: 2.1px;
+    -webkit-text-stroke-color: #000;
+    font-size: 2.2em; color: #fffdd9;
+}
 
 /* PAGINA VALORANT  */
 
@@ -435,11 +453,5 @@ body {
     background-size: cover;
 }
 
-/* #omg {
-    width: 100%;
-    background-color: black;
-    position: static;
-    display: flex;
-    bottom: 0%;
-    justify-content: center;
-} */
+ /* MENU */
+

@@ -7,17 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css_log&&cads.css">
     <title>Cadastro - Login</title>
+
 </head>
 
 <body>
     <div id="all">
         <div id="login">
             <h2 onclick="login1()">LOGIN</h2>
-            <img id="gif" src="imagens/KisameAkatsuki.gif" alt="">
+            <img id="gif" src="imagens/gaara.gif" alt="">
         </div>
         <div id="cadastro">
             <h2 onclick="cadastro1()">CADASTRO</h2>
-            <img id="gif" src="imagens/gaara.gif" alt="">
+            <img id="gif" src="imagens/KisameAkatsuki.gif" alt="">
         </div>
     </div>
 
@@ -41,11 +42,14 @@
                             <a href="index.html">
                                 <li>Inicio</li>
                             </a>
-                            <a href="story.html">
+                            <!-- <a href="story.html">
                                 <li>Histórias</li>
+                            </a> -->
+                            <a href="#">
+                                <li>Esqueceu a senha?</li>
                             </a>
                             <a href="#">
-                                <li>Sobre mim</li>
+                                <li>Não tem cadastro?</li>
                             </a>
                         </ul>
                     </div>
@@ -64,31 +68,13 @@
                     <button id="btn1">Logar</button>
                 </form>
 
-                <div class="extra">
-                    <div id="div_erro" class="msg_erro">
-                    </div>
-
-                    <img src="imagens/narutocarregamento.gif" id="img_aguarde">
-                    
-                </div>
-
-                <ul>
-
-                    <li>
-                        <a href="">
-                            Esqueceu a senha?
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="">
-                            Não tem cadastro?
-                        </a>
-                    </li>
-
-                </ul>
-
+                <box id="erros" style="display: none;">
+                <p>Login/senha não encotrados no sistema</p>
+                <img src="imagens/narutocarregamento.gif"  width="100px">
+                </box>  
+                
             </div>
+            
         </div>
     </div>
 
@@ -110,16 +96,16 @@
                     <a href="story.html">
                         <li>Histórias</li>
                     </a>
-                    <a href="#">
-                        <li>Sobre mim</li>
+                    <a href="logoff()">
+                        <li>Sair</li>
                     </a>
                 </ul>
             </div>
         </nav>
-            <div id="imgcadastro">
-                <img id="imagemcadastro" src="imagens/c2.png" alt="">
-            </div>
-        
+        <div id="imgcadastro">
+            <img id="imagemcadastro" src="imagens/c2.png" alt="">
+        </div>
+
         <div id="pagcadastro">
             <form id="form_cadastro" method="POST" onsubmit="return cadastrar()">
                 <label for="nome">Usuario:</label>
@@ -129,7 +115,7 @@
                 <input id="usuario" name="login" type="text" placeholder="Insira seu apelido" required minlength="3">
 
                 <label for="email">E-mail:</label>
-                <input id="email" name="email" type="text" placeholder="Insira seu e-mail" required>
+                <input id="email" name="email" type="email" placeholder="Insira seu e-mail" required>
 
                 <label for="password">Password:</label>
                 <input id="senha" name="senha" type="password" placeholder="Insira sua senha" required minlength="8">
@@ -139,21 +125,18 @@
 
                 <button id="btn_entrar" class="btn2">Cadastrar</button>
             </form>
-            <img src="imagens/narutocarregamento.gif" id="img_aguarde" style="display: none;" width="100px">
-    
-                <div id="div_erro" style="background-color: #bf8899; color: maroon; display: none;">
-                    Erro no cadastro
-                </div>
+            <box id="erros" style="display: none;">
+                <p>Login/senha não encotrados no sistema</p>
+                <img src="imagens/narutocarregamento.gif"  width="100px">
+                </box> 
         </div>
     </div>
+    
 </body>
 
 </html>
-
-<script src="login.js"></script>
-
-
 <script>
+
     function login1() {
         all.style.display = `none`;
         all2.style.display = `block`;
@@ -162,44 +145,35 @@
         all.style.display = `none`;
         all3.style.display = `block`;
     }
-    
-    
+
+
     function cadastrar() {
-    var formulario = new URLSearchParams(new FormData(form_cadastro));
-    fetch("/usuarios/cadastrar", {
-        method: "POST",
-        body: formulario
-    }).then(function (response) {
-        
-        if (response.ok) {
-            alert(`Cadastro realizado com sucesso`);
-            window.location.href='logincadastro.html';
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
 
-        } else {
+            if (response.ok) {
+                alert(`Parabéns!! Agora você faz parte do nossa equipe`);
+                window.location.href = 'logincadastro.html';
 
-            console.log('Erro de cadastro!');
-            response.text().then(function (resposta) {
-                div_erro.innerHTML = ("Verifique se todas informações estão corretas");
-            });
-        }
-    });
+            } else {
 
-    return false;
-}
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    diverro.innerHTML = ("Verifique se todas informações estão corretas");
+                    erros.style = "display:block";
 
-// function aguardar() {
-//     btn_entrar.disabled = true;
-//     img_aguarde.style.display='block';
-//     div_erro.style.display='none';
-// }
+                });
+            }
+        });
 
-// function finalizar_aguardar() {
-//     btn_entrar.disabled = false;
-//     img_aguarde.style.display='none';
-//     div_erro.style.display='block';
-// }
+        return false;
+    }
 
-function entrar() {
+
+    function entrar() {
         var formulario = new URLSearchParams(new FormData(form_login));
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -207,25 +181,23 @@ function entrar() {
         }).then(resposta => {
 
             if (resposta.ok) {
-
                 resposta.json().then(json => {
-                    alert("Seja bem vindo de volta " + json.nome);
+                    alert("Seja bem vindo " + json.nome);
 
                     sessionStorage.login_usuario_meuapp = json.login;
                     sessionStorage.nome_usuario_meuapp = json.nome;
 
                     window.location.href = 'story.html';
                 });
-
             } else {
                 console.log('Erro de login!');
                 resposta.text().then(texto => {
                     console.error(texto);
-                    div_erro.innerHTML = `Login/senha incorretas`
+                    erros.style = "display:block";
+
                 });
             }
         });
-
         return false;
     }
 </script>
