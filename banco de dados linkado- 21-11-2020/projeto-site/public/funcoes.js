@@ -27,7 +27,7 @@ function mensagem() {
     usericon.innerHTML = `Bem vindo`;
         setInterval(
             function myFunction(){
-                var frases = ['Oi, ','Aobaa, ','Olá, ', 'Saudações, ', ' Dattebayo ,', 'Como estás?'];
+                var frases = ['Oi, ','Aobaa, ','Olá, ', 'Saudações, ', ' Dattebayo ,', 'Como estás? '];
                 for (let i = 0; i < 2; i++) {
                 var randomico = Number(Math.trunc(Math.random() * 6))
                 usericon.innerHTML = `${frases[randomico]}` + `${nome_usuario}!`;
