@@ -344,3 +344,13 @@ input {
 #erros p {
     float: left;
 }
+
+#sumir {
+    font-size: 1rem;
+}
+#sumir img {
+    float: right;
+}
+#sumir p {
+    float: left;
+}

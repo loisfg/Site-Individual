@@ -48,7 +48,7 @@
                             <a href="#">
                                 <li>Esqueceu a senha?</li>
                             </a>
-                            <a href="#">
+                            <a href="logincadastro.html">
                                 <li>Não tem cadastro?</li>
                             </a>
                         </ul>
@@ -63,12 +63,12 @@
                     <input name="login" type="text" placeholder="Insira seu login">
 
                     <label for="passsword">Password:</label>
-                    <input name="senha" type="password" placeholder="Insira sua senha">
+                    <input name="senha" type="password" placeholder="Insira sua senha" required minlength="8">
 
                     <button id="btn1">Logar</button>
                 </form>
 
-                <box id="erros" style="display: none;">
+                <box id="sumir" style="display: none;">
                 <p>Login/senha não encotrados no sistema</p>
                 <img src="imagens/narutocarregamento.gif"  width="100px">
                 </box>  
@@ -193,7 +193,7 @@
                 console.log('Erro de login!');
                 resposta.text().then(texto => {
                     console.error(texto);
-                    erros.style = "display:block";
+                    sumir.style = "display:block";
 
                 });
             }
